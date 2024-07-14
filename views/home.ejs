@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GameMind Tech</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('back.gif');
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* spacing between cards */
+        }
+        
+        .card {
+            width: calc(33.33% - 20px); /* 33.33% width for each card minus gap */
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .full-width {
+            width: 100%; /* Full width for the "Welcome" card */
+        }
+        
+        .card-header {
+            background-color: #0b1789;
+            color: #fff;
+            padding: 10px;
+        }
+        
+        .card-header h2 {
+            margin: 0;
+            font-size: 20px;
+        }
+        
+        .card-body {
+            padding: 50px;
+        }
+        
+        .card-body ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .card-body ul li {
+            margin-bottom: 10px; /* Add margin between list items */
+            display: flex; /* Use flexbox for alignment */
+            align-items: center; /* Center align items vertically */
+            padding: 10px;
+        }
+        
+        .card-body ul li .badge {
+            margin-right: 10px; /* Add margin to separate badge from text */
+        }
+        
+        .badge {
+            background-color: #337ab7;
+            color: #fff;
+            padding: 5px 10px; /* Adjust padding for badge */
+            font-size: 14px; /* Adjust font size for badge */
+            border-radius: 10px;
+        }
+        
+        .upcoming-badge {
+            color: #337ab7;
+            font-size: 16px;
+        }
+        
+        .alert {
+            color: #ff0000;
+            font-size: 16px;
+        }
+        
+        .message {
+            color: #337ab7;
+            font-size: 16px;
+        }
+        
+        .challenge-link,
+        .quick-link,
+        .featured-link {
+            color: #337ab7;
+            text-decoration: none;
+        }
+        
+        .challenge-link:hover,
+        .quick-link:hover,
+        .featured-link:hover {
+            color: #23527c;
+        }
+        
+        .start-button,
+        .view-button {
+            background-color: #337ab7;
+            color: #fff;
+            border: none;
+            padding: 8px 15px; /* Adjust padding as needed */
+            font-size: 14px;
+            cursor: pointer;
+            display: inline-block; /* Ensure inline alignment */
+            margin-left: auto; /* Push buttons to the right */
+        }
+        
+        .start-button:hover,
+        .view-button:hover {
+            background-color: #23527c;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background-color: #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .progress-bar div {
+            height: 100%;
+            background-color: #337ab7; /* Adjust color as needed */
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card full-width">
+            <div class="card-header">
+                <h2>Welcome, John Doe!</h2>
+                <p>Points: 100 | Badges: 2 | Completed Challenges: 5</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h2>Hackerrank Challenges</h2>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li>
+                        Level 1 (Easy)<a href="https://www.hackerrank.com/contests/codenigma-4-0/challenges/a-very-easy-problem" class="challenge-link"> - <span class="start-button">Start</span></a>
+                    </li>
+                    <li>
+                        Level 2 (Medium)<a href="https://www.hackerrank.com/domains/algorithms/dynamic-programming/page/1" class="challenge-link">- <span class="start-button">Start</span></a>
+                    </li>
+                    <li>
+                        Level 3 (Hard)<a href="https://www.hackerrank.com/domains/data-structures/data-structures/page/4" class="challenge-link">- <span class="start-button">Start</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h2>Current Progress</h2>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li><b>Java</b>
+                        <div class="progress-bar" data-topic="Java" data-progress="0">
+                            <div style="width: 0%;"></div>
+                        </div>
+                    </li>
+                    <li><b>Python</b>
+                        <div class="progress-bar" data-topic="Python" data-progress="0">
+                            <div style="width: 0%;"></div>
+                        </div>
+                    </li>
+                    <li><b>CSS</b>
+                        <div class="progress-bar" data-topic="CSS" data-progress="0">
+                            <div style="width: 0%;"></div>
+                        </div>
+                    </li>
+                    <li><b>C++</b>
+                        <div class="progress-bar" data-topic="C++" data-progress="0">
+                            <div style="width: 0%;"></div>
+                        </div>
+                    </li>
+                    <li><b>Javascript</b>
+                        <div class="progress-bar" data-topic="Javascript" data-progress="0">
+                            <div style="width: 0%;"></div>
+                        </div>
+                    </li>
+                    <li><b>HTML</b>
+                        <div class="progress-bar" data-topic="HTML" data-progress="0">
+                            <div style="width: 0%;"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h2>Achievements and Badges</h2>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li>
+                        <span class="badge">Badge 1</span> - Earned on January 1, 2024
+                    </li>
+                    <li>
+                        <span class="badge">Badge 2</span> - Earned on February 15, 2024
+                    </li>
+                    <li>
+                        <span class="upcoming-badge">Upcoming: Badge 3</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h2>Quick Links</h2>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li>
+                        <a href="https://www.hackerrank.com" class="quick-link">Coding Challenges</a>
+                    </li>
+                    <li>
+                        <a href="#" class="quick-link">Progress Tracker</a>
+                    </li>
+                    <li>
+                        <a href="learning_modules.html" class="quick-link">Learning Modules</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h2>Notifications</h2>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li>
+                        <span class="alert">Alert: New Challenge Available!</span>
+                    </li>
+                    <li>
+                        <span class="message">Message: System Maintenance on July 15, 2024</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h2>Featured Content</h2>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li>
+                        <a href="https://pwskills.com/blog/steps-to-solve-complex-algorithm/" class="featured-link">Tutorial: How to Solve Algorithm Challenges - <span class="view-button">View</span></a>
+                    </li>
+                    <li>
+                        <a href="https://pwskills.com/blog/steps-to-solve-complex-algorithm/" class="featured-link">Coding-Questions and Answers- <span class="view-button">View</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
